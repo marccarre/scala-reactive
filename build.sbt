@@ -14,9 +14,14 @@ resolvers ++= Seq(
 resolvers ++= Seq("snapshots", "releases").map(Resolver.sonatypeRepo)
 
 libraryDependencies ++= Seq (
+		// Reactive processing:
     "com.netflix.rxjava" % "rxjava-scala" % "0.15.1",
     "play" %% "play-iteratees" % "2.1.5",
     "io.spray" % "spray-client" % "1.2.0",
+    "com.typesafe.akka" %% "akka-actor" % "2.2.3",
+    // Deserialization:
+    "io.spray" %% "spray-json" % "1.2.5",
+    // "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.3.0",
     // Testing
     "org.specs2" %% "specs2" % "2.3.6" % "test"
 )
