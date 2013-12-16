@@ -1,16 +1,16 @@
-package com.carmatech.bitcoin.extractors
+package bitcoin.extractors
 
 import akka.actor.ActorSystem
-import akka.pattern.ask
 import akka.io.IO
-
+import akka.util.Timeout.durationToTimeout
+import akka.pattern.ask
 import scala.concurrent._
 import scala.concurrent.duration._
-
 import spray.util._
 import spray.http._
 import spray.can.Http
 import spray.client.pipelining._
+
 
 trait HttpExtractor {
   implicit protected val system = ActorSystem()
