@@ -38,4 +38,4 @@ scalacOptions ++= Seq(
 	"-deprecation"
 )
 
-scalacOptions in Test ++= Seq("-Yrangepos")
+scalacOptions in Test ++= Seq("-Yrangepos") 
