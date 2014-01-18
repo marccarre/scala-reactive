@@ -10,12 +10,12 @@ startYear    := Some(2013)
 
 licenses     := Seq("Apache 2" -> new URL("http://www.apache.org/licenses/LICENSE-2.0.txt"))
 
+resolvers ++= Seq("snapshots", "releases").map(Resolver.sonatypeRepo)
+
 resolvers ++= Seq(
 	"Typesafe" at "http://repo.typesafe.com/typesafe/releases/",
 	"spray" at "http://repo.spray.io"
 )
-
-resolvers ++= Seq("snapshots", "releases").map(Resolver.sonatypeRepo)
 
 libraryDependencies ++= Seq(
 	// Reactive processing:
@@ -38,4 +38,4 @@ scalacOptions ++= Seq(
 	"-deprecation"
 )
 
-scalacOptions in Test ++= Seq("-Yrangepos") 
+scalacOptions in Test ++= Seq("-Yrangepos")
